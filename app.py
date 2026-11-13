@@ -266,7 +266,7 @@ if uploaded_file is not None:
             """
       try:
         # Fixed model name to gemini-1.5-pro for stable API cross-verification
-        gemini_model = genai.GenerativeModel("gemini-1.5-pro")
+        gemini_model = genai.GenerativeModel("gemini-pro")
         response = gemini_model.generate_content([cleaned_image, prompt])
 
         # Clean and parse JSON response text from Gemini
