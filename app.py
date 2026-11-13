@@ -3,6 +3,7 @@ import json
 import os
 import cv2
 import gdown
+import numpy as np  # Ensure numpy is explicitly imported here
 from PIL import Image
 import google.generativeai as genai
 import streamlit as st
@@ -10,7 +11,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import models, transforms
-
 # -------------------------------------------------------------
 # Page Configuration & Styling
 # -------------------------------------------------------------
