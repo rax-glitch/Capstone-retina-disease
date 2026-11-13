@@ -11,6 +11,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import models, transforms
+
 # -------------------------------------------------------------
 # Page Configuration & Styling
 # -------------------------------------------------------------
@@ -264,7 +265,8 @@ if uploaded_file is not None:
             "clinical_reasoning" (string explanation).
             """
       try:
-        gemini_model = genai.GenerativeModel("gemini-1.5-flash")
+        # Fixed model name to gemini-1.5-pro for stable API cross-verification
+        gemini_model = genai.GenerativeModel("gemini-1.5-pro")
         response = gemini_model.generate_content([cleaned_image, prompt])
 
         # Clean and parse JSON response text from Gemini
